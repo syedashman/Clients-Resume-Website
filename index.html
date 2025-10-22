@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azhan Bin Afzal</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azhan Bin Afzal | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="./images/azhan.png" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width: 480px), screen and (max-width:550px), screen and (max-width: 768px)"href="phone.css">
-    <link rel="icon" type="image/x-icon" href="./images/azhan.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-
-</head>
 <body>
-   <header class="header">
+  <header class="header">
     <a href="#" class="logo">AZHAN BIN AFZAL</a>
-    <i class='bx bx-menu' id="menu-icon"></i>
+    <i class="bx bx-menu" id="menu-icon"></i>
     <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
     </nav>
-   </header>
+  </header>
+
    <div class="main">
    <section class="home" id="home">
     <div class="home-content">
@@ -57,7 +46,7 @@
    </section>
    <section class="about" id="about">
     <div class="about-img">
-        <img src="./images/azhan.png" alt="">
+        <img src="./images/ajju-removebg-preview.png" alt="">
     </div>
     <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
@@ -197,8 +186,7 @@
    </section>
    <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2><br>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeAseLfaG3Dq_-PgfYE4fjq3ZFKzdoF_jTNgINhfDeofjMA5A/formResponse
-    " method="POST" target="_self">
+    <form action="" method="POST" target="_self">
     <input type="text" placeholder="Full name" name="entry.1698744559"> <br><br>
     <input type="email" placeholder="Email Address" name="entry.321243575"> <br><br>
     <input type="number" placeholder="Mobile Number" name="entry.366113519"> <br><br>
@@ -212,6 +200,17 @@
     </div>
    </footer>
    </div>
+    <script src="script.js"></script>
+<script>
+  const menu = document.querySelector('#menu-icon');
+  const navbar = document.querySelector('.navbar');
+
+  menu.addEventListener('click', () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+  });
+</script>
+
 
 </body>
 

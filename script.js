@@ -1,7 +1,7 @@
-let burger = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+// let menu = document.querySelector('#menu-icon');
+// let navbar = document.querySelector('.navbar');
 
-burger.onclick = () => {
-    burger.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
+// menu.onclick = () => {
+//   menu.classList.toggle('bx-x'); // icon change (hamburger → cross)
+//   navbar.classList.toggle('active'); // menu show/hide
+// };
