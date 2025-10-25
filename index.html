@@ -185,15 +185,35 @@
 
    </section>
    <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me!</span></h2><br>
-<form action="send_email.php" method="POST">
-    <input type="text" placeholder="Full name" name="entry.1698744559"> <br><br>
-    <input type="email" placeholder="Email Address" name="entry.321243575"> <br><br>
-    <input type="number" placeholder="Mobile Number" name="entry.366113519"> <br><br>
-<textarea placeholder="Your Message" rows="10" cols="40" name="entry.1710606378"> </textarea><br><br>
-<button type="submit" class="btn" value="submit" style="cursor: pointer;">Send Message</button>
-</form>
-   </section>
+  <h2 class="heading">Contact <span>Me!</span></h2><br>
+  <form id="contact-form">
+    <input type="text" name="from_name" placeholder="Full name" required><br><br>
+    <input type="email" name="from_email" placeholder="Email Address" required><br><br>
+    <input type="number" name="from_phone" placeholder="Mobile Number"><br><br>
+    <textarea name="message" placeholder="Your Message" rows="10" cols="40" required></textarea><br><br>
+    <button type="submit" class="btn" style="cursor:pointer;">Send Message</button>
+  </form>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("XifQihfbvxuaHnlkX"); // 🔹 Replace with your EmailJS Public Key
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_ioij5on', 'template_nh0r0vn', this)
+      .then(function() {
+        alert('✅ Your message has been sent successfully!');
+      }, function(error) {
+        alert('❌ Failed to send message. Please try again.');
+        console.log('Error:', error);
+      });
+  });
+</script>
+
    <footer class="footer">
     <div class="footer-text">
         <p>Made with &hearts; by Muhammad Azhan Bin Afzal</p>
