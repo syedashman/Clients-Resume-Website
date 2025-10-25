@@ -16,14 +16,7 @@
       font-family:'Poppins', sans-serif;
     
   }
- /* #menu-icon {
-  font-size: 3.6rem;
-  color: var(--text-color);
-  display: none;
-  cursor: pointer;
-  z-index: 1001;
-  position: relative;
-} */
+
   .main{
     height: 100vh;
   }
@@ -37,29 +30,39 @@
     color:var(--text-color);
     
   }
-  /* header{
-    position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 2rem 9%;
-      background: var(--primary-color);
-      display: flex;
-      justify-content: space-between;
-      z-index: 1;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 9%;
+  z-index: 1000;
+}
 
-  } */
+#menu-icon {
+  font-size: 3rem;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+}
+
+
+
   .logo{
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: pointer;
   }
-  /* .navbar {
-  transition: all 0.3s ease;
+.navbar {
   display: flex;
-  gap: 1.5rem;
-} */
+  gap: 2rem;
+  transition: 0.3s ease;
+}
   .navbar a{
     font-size: 1.7rem;
     color: var(--text-color);
@@ -107,10 +110,10 @@
   .home-img img{
     margin-top: -5rem; 
     height: 36rem;
-    width: 330px;        /* apni size ke hisaab se change karo */
+    width: 330px;        
     /* height: 360px; */
-    border-radius: 50%;  /* ye image ko circle banata hai */
-    border: 4px solid #007bff;  /* ye border ka color aur thickness */
+    border-radius: 50%;  
+    border: 4px solid #007bff; 
     object-fit: cover;
   }
   .home-content p{
@@ -144,7 +147,7 @@
     color: var(--secondary-color);
   letter-spacing: .1rem;
   font-weight: 600;
-  pointer-events: auto; /* Ensure buttons are clickable */
+  pointer-events: auto; 
   transition: .5s ease;
 
   }
@@ -159,9 +162,7 @@
     background-color: var(--secondary-color);
     
   }
-  .about-img{
-
-  }
+ 
   .about-img img{
     
     border-radius: 10px;
@@ -174,7 +175,6 @@
     font-size: 4.5rem;
   }
   .about-content h2{
-    /* text-align: center; */
     line-height: 1.2;
   }
   .about-content h3{
@@ -334,7 +334,6 @@
     display: flex;
     gap: 1rem;
   }
-  /* Responsive Layout Fixes */
   @media (max-width: 1200px) {
     html {
       font-size: 55%;
@@ -352,6 +351,62 @@
   }
 
   @media (max-width: 768px) {
+     body {
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 1.5rem 3%;
+    }
+
+    .home-content, .about-content {
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .home-img img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+     #menu-icon {
+    display: block;
+    z-index: 1001;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--secondary-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem ;
+    transition: right 0.4s ease;
+  }
+
+  .navbar.active {
+    right: 0; 
+    
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 1.5rem ;
+  }
+
+  .navbar a:hover,
+  .navbar a.active {
+    color: var(--main-color);
+  }
 
  .logo{
    
@@ -372,9 +427,9 @@
 
   .home {
     display: flex;
-    flex-direction: column; /* Stack in one column */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
     text-align: center;
     gap: 2rem;
     width: 100%;
@@ -395,17 +450,13 @@
 
  
   .home-img img {
-    width: 230px !important;         /* desktop se thodi badi */
-    height: 280px !important;        /* proportion maintain */
-    margin-top: 1rem;     /* thoda neeche shift */
+    width: 230px !important;         
+    height: 280px !important;        
+    margin-top: 1rem;    
     border: 4px solid #007bff; 
     border-radius: 50%;
     object-fit: cover;
   }
-
-
-
-
 
     .about {
       flex-direction: column;
@@ -434,36 +485,6 @@
     font-size: 4.5rem;
   }
 
-  /* .services-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-  
-  }
-
-  .services-container .services-box {
-    width: 90%;
-    max-width: 500px;
-    max-height: 60vh;
-    margin-bottom: 2rem;
-  }
-
-  .services h2 {
-    text-align: center;
-    font-size: 3rem;
-  }
- #con1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #con1 .services-box {
-    width: 90%;
-    height: 20%;
-    max-width: 500px; 
-  } */
    .portfolio h2{
     margin-bottom: 4rem;
     text-align: center;
@@ -472,7 +493,12 @@
       width: 100%;
       height: auto;
     }
-
+ .portfolio-box img{
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
     input,
     textarea {
       width: 90%;
@@ -514,21 +540,18 @@
     --primary-color: #111418; 
     --secondary-color: #212529;
     --text-color: #fff;
-    --main-color: #007bff; /* royal blue */
+    --main-color: #007bff; 
   }
-  /* Remove unwanted horizontal scroll globally */
   html, body {
     width: 100%;
     overflow-x: hidden;
   }
 
-  /* Prevent any flex or container overflow */
   section, header, footer, .main, .home, .about, .services, .portfolio, .contact {
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  /* Make sure portfolio and services boxes don’t overflow */
   .portfolio-container,
   .services-container {
     flex-wrap: wrap;
@@ -536,141 +559,13 @@
     overflow-x: hidden;
   }
 
-  /* Prevent image overflow */
   img {
     max-width: 100%;
     height: auto;
     display: block;
   }
 
-  /* Small device fixes */
-  @media (max-width: 768px) {
-    body {
-      overflow-x: hidden;
-    }
-
-    header {
-      padding: 1.5rem 3%;
-    }
-
-    .home-content, .about-content {
-      padding: 0 2rem;
-      text-align: center;
-    }
-
-    .home-img img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-  }
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--primary-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 9%;
-  z-index: 1000;
-}
-
-#menu-icon {
-  font-size: 3rem;
-  color: var(--text-color);
-  cursor: pointer;
-  display: none;
-}
-
-.navbar {
-  display: flex;
-  gap: 2rem;
-  transition: 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  #menu-icon {
-    display: block;
-    z-index: 1001;
-  }
-
-  .navbar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    background: var(--secondary-color);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem ;
-    transition: right 0.4s ease;
-  }
-
-  .navbar.active {
-    right: 0; /* Slide in */
-    
-  }
-
-  .navbar a {
-    display: block;
-    font-size: 2rem;
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    margin: 1.5rem ;
-  }
-
-  .navbar a:hover,
-  .navbar a.active {
-    color: var(--main-color);
-  }
-}
 
 
 
-/* @media (max-width: 768px) {
-  #menu-icon {
-    display: block;
-    cursor: pointer;
-    font-size: 2.5rem;
-    color: var(--text-color);
-    z-index: 1001;
-    position: relative;
-  }
-
-  .navbar {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #111;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
-
-  .navbar.active {
-    display: flex;
-  }
-
-  .navbar a {
-    font-size: 1.8rem;
-    color: #fff;
-  }
-
-  .header {
-    position: relative;
-    z-index: 1002;
-  }
-} */
 
