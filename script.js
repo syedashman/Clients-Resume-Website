@@ -19,3 +19,5 @@ document.querySelectorAll('.navbar a').forEach(link =>
     menuIcon.classList.replace('bx-x', 'bx-menu');
   })
 );
+
+
