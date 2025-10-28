@@ -184,42 +184,47 @@
     font-size: 1.6rem;
     margin:2rem 0 6rem;
   }
-  .services h2{
-    margin-bottom: 5rem;
-  }
-  .services-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    cursor: pointer;
-  }
-  .services-container .services-box{
-    background: var(--secondary-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem solid var(--primary-color);
-    transition: .5s ease;
-    width: 100%;
-  }
-  .services-box i{
-    font-size: 7rem;
-    color: var(--main-color);
-  }
-  .services-box h3{
-    font-size: 2.6rem;
-    color: var(--main-color);
-  }
-  .services-box p{
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
-  }
-  .services-container .services-box:hover{
+.services h2 {
+  margin-bottom: 5rem;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.services-container .services-box {
+  flex: 1 1 calc(50% - 2rem); /* desktop pe 2 boxes ek line me */
+  background: var(--secondary-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--primary-color);
+  transition: 0.5s ease;
+}
+
+.services-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.services-box h3 {
+  font-size: 2.6rem;
+  color: var(--main-color);
+}
+
+.services-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+
+.services-container .services-box:hover {
   border-color: var(--main-color);
   transform: scale(1.02);
-  }
+}
   .portfolio{
     background-color: var(--secondary-color);
     cursor: pointer;
@@ -239,12 +244,12 @@
     box-shadow: 0 0 1rem var(--primary-color);
     overflow: hidden;
     display: flex;
-    width: 100%;
+    width: 80%;
   }
   .portfolio-box img{
     display: block;
     width: 100%;
-    height: 650px;
+    height: 550px;
     object-fit: cover;
   }
   .portfolio-box .portfolio-layer{
@@ -447,9 +452,7 @@
 
 
   }
-
- 
-  .home-img img {
+.home-img img {
     width: 230px !important;         
     height: 280px !important;        
     margin-top: 1rem;    
@@ -567,4 +570,9 @@
 
 
 
+@media (max-width: 768px) {
+  .services-container .services-box {
+    flex: 1 1 100%; /* mobile pe har box full width lega */
+  }
+}
 
