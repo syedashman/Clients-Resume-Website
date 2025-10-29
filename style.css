@@ -184,10 +184,9 @@
     font-size: 1.6rem;
     margin:2rem 0 6rem;
   }
-.services h2 {
+.services h2{
   margin-bottom: 5rem;
-}
-
+ }
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -225,6 +224,8 @@
   border-color: var(--main-color);
   transform: scale(1.02);
 }
+
+
   .portfolio{
     background-color: var(--secondary-color);
     cursor: pointer;
@@ -330,15 +331,20 @@
   .footer-text p{
     font-size: 1.6rem;
   }
-  .services #con1{
-    display: flex;
-    gap: 1rem;
-  }
+ .services #con1{
+    justify-content: center;
+   flex-direction: column;
+  display: flex;
+  gap: 1rem;
+ }
 
-  .services #con2{
-    display: flex;
-    gap: 1rem;
-  }
+.services #con2{
+    justify-content: center;
+
+   flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
   @media (max-width: 1200px) {
     html {
       font-size: 55%;
@@ -482,12 +488,27 @@
   height: auto;
   margin-bottom: 2rem;
 }
-
- .services h2{
-    text-align: center;
-    font-size: 4.5rem;
+.services {
+  justify-content: center ;
+  text-align: center;
+}
+.services h2 {
+  text-align: center;
+  font-size: 4.5rem;
+  }
+   
+  .services-container {
+    flex-direction: column !important;
+    align-items: center  !important;
+    justify-content: center !important;
   }
 
+  .services-container .services-box {
+    justify-content: center;
+    flex: 1 1 100% !important;
+    width: 80% !important;
+    max-width: 400px !important;
+  }
    .portfolio h2{
     margin-bottom: 4rem;
     text-align: center;
@@ -570,9 +591,9 @@
 
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .services-container .services-box {
-    flex: 1 1 100%; /* mobile pe har box full width lega */
+    flex: 1 1 100%; 
   }
-}
+} */
 
